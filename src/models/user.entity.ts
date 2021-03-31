@@ -14,4 +14,7 @@ export class User extends BaseEntity {
 
   @Column({ type: 'date' })
   dob: Date;
+
+  @Column({ nullable: true, default: 'user' })
+  role: string;
 }

@@ -12,4 +12,9 @@ export class UserService {
   public async getAll() {
     return await this.repo.find();
   }
+
+  public async create(body: any) {
+    const newUser = this.repo.create(body);
+    return this.repo.save(newUser);
+  }
 }
